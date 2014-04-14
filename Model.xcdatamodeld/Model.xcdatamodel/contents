@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Groups" syncable="YES">
+        <attribute name="grouptype" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isAlreadyIn" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="isNeedVerify" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomAdmin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomIconUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomIntroduction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomMember" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="roomXMPPid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speakstate" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Messages" syncable="YES">
+        <attribute name="headimg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageLocalPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURLPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="messageFrom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageReadFlag" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="messageRoom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageSendXMPPid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="messageTo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="SystemNotifications" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="notificationFrom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationHead" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="notificationType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="roomId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Users" syncable="YES">
+        <attribute name="cityName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grade_tips" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="gradeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userHead" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userNickname" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Groups" positionX="0" positionY="0" width="128" height="193"/>
+        <element name="Messages" positionX="0" positionY="0" width="128" height="30"/>
+        <element name="SystemNotifications" positionX="0" positionY="108" width="128" height="180"/>
+        <element name="Users" positionX="0" positionY="90" width="128" height="163"/>
+    </elements>
+</model>

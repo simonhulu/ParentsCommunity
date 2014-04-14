@@ -1,0 +1,104 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+//用户信息
+#define kMY_USER_ID @"myUserId"
+#define kMY_USER_PASSWORD @"myUserPassword"
+#define kMY_USER_NICKNAME @"myUserNickname"
+#define kMY_USER_Head @"myUserHead"
+#define kMY_USER_LoginName @"myUserLoginName"
+#define kMY_USER_OBJECT @"WCUserObject"
+//localhos 192.168.9.245
+//www host jzh-chat.xueersi.com
+#define kXMPPHost @"jzh-chat.xueersi.com"
+//localdomain lidongsheng-lenovo
+//www conference.chat-app
+#define xmppdomain @"conference.chat-app"
+#define kXMPPmyJID @"iostester"
+#define kXMPPmyPassword @"153931021"
+#define kLastMessageDate @""
+#define iappVersion @"beta"
+
+#define NetworkReachabilityChangedNotification @"NetworkReachabilityChangedNotification"
+#define kXMPPNewMsgNotifaction @"xmppNewMsgNotifaction"
+#define ConnectionNoReach @"ConnectionNoReach"
+#define ConnectionReach @"ConnectionReach"
+//消息变为已读
+#define kXMPPNewMsgNotifiactionReaded @"xmppNewMsgNotifiactionReaded"
+#define refreshGroupsNotification @"refreshGroupsNotification"
+#define getRemoteGroupListNotification @"getRemoteGroupListNotification"
+#define joinRoomNotification @"joinRoomNotification"
+#define imageSaveFolder @"img"
+#define gotoMainGroupPageNotification @"gotoMainGroupPageNotification"
+#define newNotificationCome @"newNotificationCome"
+#define newNotificationChecked @"newNotidicationChecked"
+#define applyloginAction @"loginAction"
+#define loginSuccessNotification @"loginSuccessNotification"
+#define loginFailNotification @"loginFailNotification"
+#define loginNetworkError @"loginNetworkError"
+#define gotoUserInfoComplete @"gotoUserInfoComplete"
+#define banSendMessage @"banSendMessageNotification"
+#define reCoverSendMessage @"reCoverSendMessage"
+#define refreshUserHead @"refreshUserHead"
+#define refreshUserNickName @"refreshUserNickName"
+#define sendApplyMsg @"sendApplyMsg"
+#define exitTheGroup @"exitTheGroup"
+//api
+//jzh.xueersi.com
+//jzh.xueersi.com
+#define apihost @"jzh.xueersi.com"
+#define getRoomList @"http://jzh.xueersi.com/Rooms/getRoomLists"
+#define xmppResource @"xesios"
+#define uploadMsgImage @"http://jzh.xueersi.com/Rooms/uploadMsgImg"
+#define registeAccount @"http://jzh.xueersi.com/Users/register"
+#define loginApi @"http://jzh.xueersi.com/Users/login"
+#define uploadHeadImageApi @"http://jzh.xueersi.com/Users/UploadThunmbnail"
+#define completeUerInfoApi @"http://jzh.xueersi.com/Users/completeInfo"
+#define joinGroupApi @"http://jzh.xueersi.com/Rooms/joinRoom"
+#define applyGroupApi @"http://jzh.xueersi.com/Rooms/applyJoinRoom"
+#define exitGroupApi @"http://jzh.xueersi.com/Rooms/exitRoom"
+#define getHistoryApi @"http://jzh.xueersi.com/Rooms/getHistoryMsg"
+#define submitItoken @"http://jzh.xueersi.com/MobileIos/addToken"
+#define appResignActiveApi @"http://jzh.xueersi.com/MobileIos/HandUp"
+#define userLoginOutApi @"http://jzh.xueersi.com/MobileIos/logout"
+#define appReactiveApp @"http://jzh.xueersi.com/MobileIos/reactive"
+//FMDB
+#define FMDBQuickCheck(SomeBool) { if (!(SomeBool)) { NSLog(@"Failure on line %d", __LINE__); abort(); } }
+
+#define DATABASE_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0]stringByAppendingString:@"/pm.db"]
+//API路径
+#define API_BASE_URL(_URL_) [NSURL URLWithString:[@"http://www.hcios.com:8080/" stringByAppendingString:_URL_]]
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
+#define IS_OS_5_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0)
+#define IS_OS_6_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0)
+#define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import "WCMessageObject.h"
+    #import "WCUserObject.h"
+    #import "WCMessageUserUnionObject.h"
+    #import "WCXMPPManager.h"
+    #import "ASIFormDataRequest.h"
+    #import "SBJsonParser.h"
+    #import "ASIHTTPRequest.h"
+    #import "FMDatabase.h"
+    #import "DDLog.h"
+    #import "DDTTYLogger.h"
+    #if DEBUG
+    static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+    #else
+    static const int ddLogLevel = LOG_LEVEL_INFO;
+    #endif
+#endif
